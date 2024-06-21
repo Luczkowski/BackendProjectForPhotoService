@@ -1,0 +1,6 @@
+@PTBackend2024_HostAddress = http://localhost:5168
+
+GET {{PTBackend2024_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

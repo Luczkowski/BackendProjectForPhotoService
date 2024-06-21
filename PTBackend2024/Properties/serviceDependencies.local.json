@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "storage1": {
+      "containerPorts": "10000:10000,10001:10001,10002:10002",
+      "secretStore": "LocalSecretsFile",
+      "containerName": "photos",
+      "containerImage": "mcr.microsoft.com/azure-storage/azurite",
+      "type": "storage.container",
+      "connectionId": "AzureBlobStorage:ConnectionString",
+      "dynamicId": null
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/westus/connectors/ConnectionStringsDefaultConnection_47BCBFFB09",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/ptbackend2024/databases/DB_PTBackend2024",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DefaultConnection",
+      "dynamicId": null
+    }
+  }
+}

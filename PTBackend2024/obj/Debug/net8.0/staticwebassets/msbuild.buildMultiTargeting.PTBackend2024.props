@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PTBackend2024.props" />
+</Project>
